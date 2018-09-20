@@ -11,8 +11,8 @@ def hash_with_sha256(str):
 def h(position,password,initial,maxVal,salt,hashed):
     password = initial
     #2 FOR LOOPS, THE OUTERMOST KEEPS TRACK OF THE USER, THE INNER LOOP USES BRUTEFORCE TO DECODE
-    for j in range (100,0,-1):
-        for i in range(0, maxVal+1):
+    for j in range (100,0,-1):                  # consider making a helper method to traverse the length of the text
+        for i in range(0, maxVal+1):         #  file instead of making it hard coded, for different size of text files.
             if i == maxVal:
                 print("...")
                 h(position,password, initial + '0',maxVal*10,salt,hashed)
